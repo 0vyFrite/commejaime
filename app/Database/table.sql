@@ -1,7 +1,7 @@
 -- Active: 1761055692295@@127.0.0.1@3306@regime_sante
 DROP DATABASE IF EXISTS regime_sante;
 
-CREATE DATABASE regime_sante;
+CREATE DATABASE IF NOT EXISTS regime_sante;
 
 USE regime_sante;
 

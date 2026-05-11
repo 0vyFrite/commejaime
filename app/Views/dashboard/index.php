@@ -113,6 +113,23 @@
             </form>
         </div>
     <?php }?>
+
+    <!-- RECHARGE -->
+    <p class="section-titre">💳 Recharger mon portefeuille</p>
+    <div class="portefeuille-box">
+        <form method="POST" action="/portefeuille/recharger">
+            <?= csrf_field()?>
+            <input
+                type="text"
+                name="code"
+                placeholder="Entrer un code"
+                required>
+            <button type="submit" class="btn-recharger">
+                Recharger
+            </button>
+        </form>
+    </div>
+    <br><br>
     <!-- RÉGIMES RECOMMANDÉS -->
     <p class="section-titre">🎯 Régimes recommandés</p>
     <div class="regimes-recommandes">
@@ -207,21 +224,6 @@
         <?php else: ?>
             <p class="no-regimes">Aucun régime recommandé pour votre objectif.</p>
         <?php endif; ?>
-    </div>
-    <!-- RECHARGE -->
-    <p class="section-titre">💳 Recharger mon portefeuille</p>
-    <div class="portefeuille-box">
-        <form method="POST" action="/portefeuille/recharger">
-            <?= csrf_field()?>
-            <input
-                type="text"
-                name="code"
-                placeholder="Entrer un code"
-                required>
-            <button type="submit" class="btn-recharger">
-                Recharger
-            </button>
-        </form>
     </div>
 </div>
 
