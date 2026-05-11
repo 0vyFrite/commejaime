@@ -80,3 +80,1503 @@ DEBUG - 2026-05-11 04:42:44 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2026-05-11 04:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-05-11 04:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-05-11 04:43:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-05-11 04:46:30 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:46:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:46:36 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:46:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:46:40 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:46:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:47:23 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:47:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:47:23 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:47:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:47:24 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:47:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:47:24 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:47:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:47:24 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:47:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:47:24 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:47:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:47:24 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:47:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:47:24 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:47:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:47:24 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:47:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:47:25 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:47:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:47:25 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:47:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:47:25 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:47:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:47:25 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:47:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:47:25 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:47:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:47:25 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:47:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:47:26 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:47:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:47:40 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:47:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:47:44 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:47:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:47:44 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:47:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:48:31 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:48:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:48:31 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:48:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:48:31 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:48:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:48:32 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:48:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:48:34 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:48:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:48:35 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:48:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:48:38 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:48:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-11 04:48:39 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/lampp/htdocs/S4/SI/commejaime/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/S4/SI/commejaime/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/S4/SI/commejaime/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/S4/SI/commejaime/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /opt/lampp/htdocs/S4/SI/commejaime/app/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+#6 /opt/lampp/htdocs/S4/SI/commejaime/app/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+#7 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+#8 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/S4/SI/commejaime/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/S4/SI/commejaime/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /opt/lampp/htdocs/S4/SI/commejaime/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-05-11 04:48:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/ProfilSanteModel.php(34): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/DashboardController.php(15): App\Models\ProfilSanteModel->getProfilUser()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()

@@ -7,7 +7,7 @@ use App\Controllers\RegimesController;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
+$routes->get('/', 'AuthController::loginForm');
 
 //Auth routes
 $routes->get('/index','AuthController::loginForm');

@@ -5,6 +5,8 @@ CREATE DATABASE regime_sante;
 
 USE regime_sante;
 
+SELECT * FROM utilisateurs;
+
 CREATE or replace TABLE utilisateurs (
     id_user INT PRIMARY KEY AUTO_INCREMENT,
     nom VARCHAR(100) NOT NULL,
