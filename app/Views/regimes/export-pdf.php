@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plan de régime - <?= esc($regime['nom']) ?></title>
     <!-- html2pdf library for client-side PDF generation -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="<?= base_url('assets/js/html2pdf.bundle.min.js') ?>"></script>
     <style>
         * {
             margin: 0;
