@@ -195,6 +195,7 @@
 </head>
 <body>
     <div class="no-print">
+        <a href="<?= base_url('dashboard') ?>"><button>Retour</button></a>
         <button onclick="exportPDF()">📥 Télécharger en PDF</button>
     </div>
 

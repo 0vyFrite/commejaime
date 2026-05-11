@@ -11,8 +11,6 @@
 <nav>
     <div class="logo">🥗 RégimeSanté</div>
     <div class="nav-right">
-        <a href="/profil">Mon profil</a>
-        <a href="/regimes">Régimes</a>
         <?php if($user['est_gold']??false){?>
             <span class="badge-gold">⭐ GOLD</span>
         <?php }?>
