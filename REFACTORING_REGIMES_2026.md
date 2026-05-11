@@ -61,10 +61,14 @@ Si l'utilisateur doit perdre 15 kg:
 - ✅ Données passées à la vue: `$regimes` (au lieu de `$combinaisons`)
 
 ### 3. **RegimesController** (`app/Controllers/RegimesController.php`)
-- ✅ **Nouvelle méthode**: `exportRegimePdf($regimeId, $pourcentage)`
-  - Export individual regime as PDF
+- ✅ **Nouvelle méthode**: `exportRegimePdf($regimeId, $activiteId)`
+  - Export individual regime + activity as PDF-compatible view
+  - Récupère `pourcentage` depuis les query parameters (`?pourcentage=33.33`)
+  - Utilise `window.print()` côté client (pas de dépendance externe)
   - Affiche tous les détails du régime
+  - Affiche tous les détails de l'activité (sport) associée
   - Montre le pourcentage calculé
+  - Affiche les informations du profil utilisateur
 - ⚠️ Anciennes méthodes remplacées par exception 404:
   - `getAllRegimes()` - Supprimée
   - `details()` - Supprimée
@@ -73,7 +77,10 @@ Si l'utilisateur doit perdre 15 kg:
   - `exportPdfPost()` - Supprimée
 
 ### 4. **Routes** (`app/Config/Routes.php`)
-- ✅ **Nouvelle route**: `GET /regimes/export/:num/:num` → `RegimesController::exportRegimePdf`
+- ✅ **Nouvelle route**: `GET /regimes/export/:num/:num?pourcentage=X.XX` → `RegimesController::exportRegimePdf`
+  - Paramètre 1 (URL): regimeId
+  - Paramètre 2 (URL): activiteId
+  - Paramètre 3 (Query): pourcentage (peut être décimal)
 - ❌ Routes obsolètes supprimées:
   - `/regimes/details/:any`
   - `/regimes/print/:any`
@@ -101,7 +108,10 @@ Si l'utilisateur doit perdre 15 kg:
 - ⚠️ `details.php` - Marquée obsolète (lance 404)
 - ⚠️ `details-print.php` - Marquée obsolète (lance 404)
 - ⚠️ `details-pdf.php` - Marquée obsolète (lance 404)
-- ✅ `export-pdf.php` - **Nouvelle vue** pour export PDF des régimes
+- ✅ `export-pdf.php` - **Nouvelle vue** pour export PDF:
+  - Affiche les détails du régime (composition, variation, durée, prix)
+  - Affiche les détails de l'activité (description, variation, fréquence, durée)
+  - Affiche les informations du profil utilisateur (IMC, poids, taille)
 
 ## Impact utilisateur
 

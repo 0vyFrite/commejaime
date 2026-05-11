@@ -26,4 +26,4 @@ $routes->post('/inscription/etape2','AuthController::inscriptionEtape2Post');
 $routes->get('/dashboard','DashboardController::index');
 
 //Regimes
-$routes->get('/regimes/export/(:num)/(:num)','RegimesController::exportRegimePdf/$1/$2');
+$routes->get('/regimes/export/(:num)/(:num)/(:num)','RegimesController::exportRegimePdf/$1/$2/$3');

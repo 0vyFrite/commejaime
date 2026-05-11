@@ -2,12 +2,55 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Plan de régime</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de régime - <?= esc($regime['nom']) ?></title>
+    <!-- html2pdf library for client-side PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
             color: #333;
+            background: #f5f5f5;
+        }
+        .no-print {
+            display: block;
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #ddd;
+        }
+        .no-print button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin: 0 5px;
+        }
+        .no-print button:hover {
+            background: #45a049;
+        }
+        .no-print button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .document {
+            background: white;
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .header {
             text-align: center;
@@ -102,6 +145,23 @@
             font-weight: bold;
             font-size: 12px;
         }
+        .activite-details {
+            background: #fff;
+            border: 2px solid #2196F3;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .activite-title {
+            font-size: 24px;
+            color: #1976D2;
+            margin-bottom: 10px;
+        }
+        .activite-description {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
         .footer {
             margin-top: 30px;
             padding-top: 20px;
@@ -110,92 +170,151 @@
             font-size: 12px;
             color: #999;
         }
-        .page-break {
-            page-break-after: always;
+        
+        /* Styles d'impression */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background: white;
+            }
+            .document {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>🥗 Plan de Régime Personnalisé</h1>
-        <p>Document généré pour <?= esc($user['nom']) ?></p>
+    <div class="no-print">
+        <button onclick="exportPDF()">📥 Télécharger en PDF</button>
     </div>
 
-    <div class="user-info">
-        <p><strong>Utilisateur:</strong> <?= esc($user['nom']) ?></p>
-        <p><strong>Email:</strong> <?= esc($user['email']) ?></p>
-        <p><strong>Date:</strong> <?= date('d/m/Y') ?></p>
-        <p><strong>Taille:</strong> <?= esc($profil['taille_cm']) ?> cm - <strong>Poids:</strong> <?= esc($profil['poids_kg']) ?> kg - <strong>IMC:</strong> <?= esc($profil['imc']) ?></p>
-    </div>
-
-    <div class="regime-details">
-        <div class="regime-title"><?= esc($regime['nom']) ?></div>
-        
-        <div class="percentage-badge">
-            <?= esc($pourcentage) ?>% du traitement
+    <div class="document" id="pdf-content">
+        <div class="header">
+            <h1>🥗 Plan de Régime Personnalisé</h1>
+            <p>Document généré pour <?= esc($user['nom']) ?></p>
         </div>
 
-        <div class="regime-description">
-            <?= esc($regime['description']) ?>
+        <div class="user-info">
+            <p><strong>Utilisateur:</strong> <?= esc($user['nom']) ?></p>
+            <p><strong>Email:</strong> <?= esc($user['email']) ?></p>
+            <p><strong>Date:</strong> <?= date('d/m/Y') ?></p>
+            <p><strong>Taille:</strong> <?= esc($profil['taille_cm']) ?> cm - <strong>Poids:</strong> <?= esc($profil['poids_kg']) ?> kg - <strong>IMC:</strong> <?= esc($profil['imc']) ?></p>
         </div>
 
-        <table class="details-table">
-            <tr>
-                <th>Paramètre</th>
-                <th>Valeur</th>
-            </tr>
-            <tr>
-                <td>Variation de poids (régime base)</td>
-                <td><?= esc($regime['variation_poids_kg']) ?> kg</td>
-            </tr>
-            <tr>
-                <td>Durée du régime (base)</td>
-                <td><?= esc($regime['duree_jours']) ?> jours</td>
-            </tr>
-            <tr>
-                <td>Durée calculée pour vous</td>
-                <td><strong><?= esc($joursNecessaires) ?> jours</strong></td>
-            </tr>
-            <tr>
-                <td>Prix (prix unitaire)</td>
-                <td><?= number_format($regime['prix'], 0, ',', ' ') ?> Ar</td>
-            </tr>
-        </table>
+        <div class="regime-details">
+            <div class="regime-title"><?= esc($regime['nom']) ?></div>
 
-        <div>
-            <h3>Composition du régime</h3>
-            <div class="composition-bars">
-                <div class="bar-item">
-                    <div class="bar-label">Viande: <?= esc($regime['pct_viande']) ?>%</div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: <?= esc($regime['pct_viande']) ?>%">
-                            <?= esc($regime['pct_viande']) ?>%
+            <div class="regime-description">
+                <?= esc($regime['description']) ?>
+            </div>
+
+            <table class="details-table">
+                <tr>
+                    <th>Paramètre</th>
+                    <th>Valeur</th>
+                </tr>
+                <tr>
+                    <td>Variation de poids</td>
+                    <td><?= esc($totalPoids) ?> kg</td>
+                </tr>
+                <tr>
+                    <td>Durée</td>
+                    <td><strong><?= esc($totalDuree) ?> jours</strong></td>
+                </tr>
+                <tr>
+                    <td>Prix</td>
+                    <td><?= number_format($totalPrix, 0, ',', ' ') ?> Ar</td>
+                </tr>
+            </table>
+
+            <div>
+                <h3>Composition du régime</h3>
+                <div class="composition-bars">
+                    <div class="bar-item">
+                        <div class="bar-label">Viande: <?= esc($regime['pct_viande']) ?>%</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: <?= esc($regime['pct_viande']) ?>%">
+                                <?= esc($regime['pct_viande']) ?>%
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="bar-item">
-                    <div class="bar-label">Poisson: <?= esc($regime['pct_poisson']) ?>%</div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: <?= esc($regime['pct_poisson']) ?>%">
-                            <?= esc($regime['pct_poisson']) ?>%
+                    <div class="bar-item">
+                        <div class="bar-label">Poisson: <?= esc($regime['pct_poisson']) ?>%</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: <?= esc($regime['pct_poisson']) ?>%">
+                                <?= esc($regime['pct_poisson']) ?>%
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="bar-item">
-                    <div class="bar-label">Volaille: <?= esc($regime['pct_volaille']) ?>%</div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: <?= esc($regime['pct_volaille']) ?>%">
-                            <?= esc($regime['pct_volaille']) ?>%
+                    <div class="bar-item">
+                        <div class="bar-label">Volaille: <?= esc($regime['pct_volaille']) ?>%</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: <?= esc($regime['pct_volaille']) ?>%">
+                                <?= esc($regime['pct_volaille']) ?>%
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <br><br><br><br><br>
+
+        <div class="activite-details">
+            <div class="activite-title">💪 <?= esc($activite['nom']) ?></div>
+
+            <div class="activite-description">
+                <?= esc($activite['description']) ?>
+            </div>
+
+            <table class="details-table">
+                <tr>
+                    <th>Paramètre</th>
+                    <th>Valeur</th>
+                </tr>
+                <tr>
+                    <td>Variation de poids (activité)</td>
+                    <td><?= esc($activite['variation_poids_kg']) ?> kg</td>
+                </tr>
+                <tr>
+                    <td>Fréquence</td>
+                    <td><?= esc($activite['frequence_semaine']) ?> fois par semaine</td>
+                </tr>
+                <tr>
+                    <td>Durée par session</td>
+                    <td><?= esc($activite['duree_minutes']) ?> minutes</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p>Document généré par RégimeSanté - Tous droits réservés</p>
+            <p>Pour plus d'informations, consultez votre profil RégimeSanté</p>
+        </div>
     </div>
 
-    <div class="footer">
-        <p>Document généré par RégimeSanté - Tous droits réservés</p>
-        <p>Pour plus d'informations, consultez votre profil RégimeSanté</p>
-    </div>
+    <script>
+        function exportPDF() {
+            const element = document.getElementById('pdf-content');
+            const filename = 'regime-<?= esc($regime['id']) ?>-<?= esc($user['id']) ?>.pdf';
+            
+            // Configuration pour html2pdf
+            const options = {
+                margin: 10,
+                filename: filename,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
+            };
+
+            // Générer et télécharger le PDF
+            html2pdf().set(options).from(element).save();
+        }
+    </script>
 </body>
 </html>

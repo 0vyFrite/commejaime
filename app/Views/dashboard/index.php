@@ -201,7 +201,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="btn-export-pdf" onclick="exportRegimePdf('<?= esc($item['regime']['id']) ?>', '<?= esc($item['regime']['nom']) ?>', '<?= esc($item['pourcentage']) ?>')">
+                    <button class="btn-export-pdf" onclick="exportRegimePdf('<?= esc($item['regime']['id']) ?>', '<?= esc($item['activite']['id']) ?>', '<?= esc($item['pourcentage']) ?>')">
                         📥 Exporter en PDF
                     </button>
                 </div>
@@ -232,11 +232,11 @@
 </footer>
 
 <script>
-function exportRegimePdf(regimeId, regimeName, pourcentage) {
+function exportRegimePdf(regimeId, activiteId, pourcentage) {
     // Créer une forme pour soumettre la requête d'export
     const form = document.createElement('form');
     form.method = 'GET';
-    form.action = `/regimes/export/${regimeId}/${pourcentage}`;
+    form.action = `/regimes/export/${regimeId}/${activiteId}/${pourcentage}`;
     form.style.display = 'none';
     
     document.body.appendChild(form);

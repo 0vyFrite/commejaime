@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\RegimeModel;
 use App\Models\ProfilSanteModel;
+use App\Models\ActiviteModel;
 
 class RegimesController extends BaseController
 {
@@ -11,9 +12,10 @@ class RegimesController extends BaseController
      * Exporte un régime individuel en PDF
      * 
      * @param int $regimeId L'ID du régime
-     * @param float $pourcentage Le pourcentage du traitement complet
+     * @param int $activiteId L'ID de l'activité associée
+     * @param int $pourcentage Le pourcentage du traitement complet
      */
-    public function exportRegimePdf($regimeId, $pourcentage)
+    public function exportRegimePdf($regimeId, $activiteId, $pourcentage)
     {
         $user = session()->get('user');
         if (!$user) {
@@ -22,35 +24,41 @@ class RegimesController extends BaseController
 
         $regimeModel = new RegimeModel();
         $profilModel = new ProfilSanteModel();
+        $activiteModel = new ActiviteModel();
 
         $regime = $regimeModel->find($regimeId);
         if (!$regime) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
 
+        $activite = $activiteModel->find($activiteId);
+        if (!$activite) {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+        }
+
         $profil = $profilModel->getProfilUser($user['id']);
 
-        // Calculer les jours nécessaires (pourcentage du régime de base)
-        $joursNecessaires = floor(($pourcentage / 100) * $regime['duree_jours']);
+        $totalPoids = $regime['variation_poids_kg'];
+        $totalPoids *= $pourcentage / 100;
+        $totalPoids = round($totalPoids);
+        
+        $totalDuree = $regime['duree_jours'];
+        $totalDuree *= $pourcentage / 100;
+        $totalDuree = floor($totalDuree);
+        
+        $totalPrix = $regime['prix'];
+        $totalPrix *= $pourcentage / 100;
+        $totalPrix = round($totalPrix / 100) * 100;
 
-        $html = view('regimes/export-pdf', [
+        return view('regimes/export-pdf', [
             'user' => $user,
             'profil' => $profil,
             'regime' => $regime,
+            'activite' => $activite,
             'pourcentage' => $pourcentage,
-            'joursNecessaires' => $joursNecessaires,
-        ], ['saveData' => false]);
-
-        // Utiliser Dompdf pour générer le PDF
-        $options = new \Dompdf\Options();
-        $options->set('isHtml5ParserEnabled', true);
-        $options->set('defaultFont', 'Courier');
-        
-        $dompdf = new \Dompdf\Dompdf($options);
-        $dompdf->loadHtml($html);
-        $dompdf->setPaper('A4', 'portrait');
-        $dompdf->render();
-
-        return $dompdf->stream('regime-' . $regime['id'] . '.pdf', ['Attachment' => 0]);
+            'totalPoids' => $totalPoids,
+            'totalDuree' => $totalDuree,
+            'totalPrix' => $totalPrix,
+        ]);
     }
 }

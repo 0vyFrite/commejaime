@@ -128,7 +128,7 @@ class RegimeModel extends Model
                 
                 // Calculer le pourcentage : (jours calculés / jours base) × 100
                 $pourcentage = ($joursCalcules / $regime['duree_jours']) * 100;
-                $pourcentage = round($pourcentage, 2);
+                $pourcentage = round($pourcentage);
 
                 $regime['variation_poids_kg'] *= $pourcentage / 100;
                 $regime['variation_poids_kg'] = round($regime['variation_poids_kg'], 2);
