@@ -40,7 +40,7 @@ class RegimesController extends BaseController
 
         $totalPoids = $regime['variation_poids_kg'];
         $totalPoids *= $pourcentage / 100;
-        $totalPoids = round($totalPoids);
+        $totalPoids = round($totalPoids, 2);
         
         $totalDuree = $regime['duree_jours'];
         $totalDuree *= $pourcentage / 100;

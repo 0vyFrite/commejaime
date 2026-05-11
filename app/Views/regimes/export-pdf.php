@@ -146,6 +146,7 @@
             font-size: 12px;
         }
         .activite-details {
+            margin-top: 5%;
             background: #fff;
             border: 2px solid #2196F3;
             padding: 20px;
@@ -169,6 +170,10 @@
             text-align: center;
             font-size: 12px;
             color: #999;
+        }
+
+        .page-break {
+            page-break-before: always;
         }
         
         /* Styles d'impression */
@@ -263,7 +268,7 @@
             </div>
         </div>
 
-        <br><br><br><br><br>
+        <div class="page-break"></div>
 
         <div class="activite-details">
             <div class="activite-title">💪 <?= esc($activite['nom']) ?></div>
@@ -301,7 +306,7 @@
     <script>
         function exportPDF() {
             const element = document.getElementById('pdf-content');
-            const filename = 'regime-<?= esc($regime['id']) ?>-<?= esc($user['id']) ?>.pdf';
+            const filename = 'regime.pdf';
             
             // Configuration pour html2pdf
             const options = {
