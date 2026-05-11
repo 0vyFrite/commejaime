@@ -1,0 +1,134 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#f0f4f8;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:2rem;
+}
+
+.card{
+    background:#fff;
+    border-radius:16px;
+    box-shadow:0 4px 24px rgba(0,0,0,.08);
+    padding:2.5rem;
+    width:100%;
+    max-width:420px;
+}
+
+.logo{
+    font-size:2rem;
+    text-align:center;
+    margin-bottom:.5rem;
+}
+
+h1{
+    font-size:1.4rem;
+    font-weight:600;
+    color:#1e293b;
+    text-align:center;
+    margin-bottom:.25rem;
+}
+
+.sous-titre{
+    font-size:.875rem;
+    color:#64748b;
+    text-align:center;
+    margin-bottom:2rem;
+}
+
+.alerte-erreur{
+    background:#fef2f2;
+    border:1px solid #fecaca;
+    border-radius:8px;
+    color:#dc2626;
+    padding:.75rem 1rem;
+    font-size:.875rem;
+    margin-bottom:1.25rem;
+}
+
+.alerte-succes{
+    background:#f0fdf4;
+    border:1px solid #bbf7d0;
+    border-radius:8px;
+    color:#166534;
+    padding:.75rem 1rem;
+    font-size:.875rem;
+    margin-bottom:1.25rem;
+}
+
+.form-group{
+    margin-bottom:1.1rem;
+}
+
+label{
+    display:block;
+    font-size:.85rem;
+    font-weight:500;
+    color:#374151;
+    margin-bottom:.35rem;
+}
+
+input{
+    width:100%;
+    padding:.65rem .9rem;
+    border:1.5px solid #d1d5db;
+    border-radius:8px;
+    font-size:.95rem;
+    color:#1e293b;
+    background:#fff;
+    transition:border-color .2s;
+    outline:none;
+}
+
+input:focus{
+    border-color:#4f46e5;
+}
+
+input.erreur{
+    border-color:#ef4444;
+}
+
+.msg-erreur{
+    font-size:.78rem;
+    color:#ef4444;
+    margin-top:.25rem;
+}
+
+.btn{
+    width:100%;
+    padding:.8rem;
+    border:none;
+    border-radius:8px;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    background:#4f46e5;
+    color:#fff;
+    margin-top:.5rem;
+    transition:background .2s;
+}
+
+.btn:hover{
+    background:#4338ca;
+}
+
+.lien-inscription{
+    text-align:center;
+    margin-top:1.25rem;
+    font-size:.875rem;
+    color:#64748b;
+}
+
+.lien-inscription a{
+    color:#4f46e5;
+    text-decoration:none;
+    font-weight:500;
+}

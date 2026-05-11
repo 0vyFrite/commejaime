@@ -1,0 +1,228 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#f0f4f8;
+}
+
+/* NAVBAR */
+
+nav{
+    background:#4f46e5;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1rem 2rem;
+}
+
+.logo{
+    font-size:1.2rem;
+    font-weight:700;
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+}
+
+.nav-right a{
+    color:#fff;
+    text-decoration:none;
+}
+
+.badge-gold{
+    background:#fbbf24;
+    color:#78350f;
+    padding:.2rem .6rem;
+    border-radius:999px;
+    font-size:.75rem;
+    font-weight:700;
+}
+
+.btn-logout{
+    background:rgba(255,255,255,.15);
+    border:none;
+    color:#fff;
+    padding:.45rem .9rem;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* PAGE */
+
+.page{
+    max-width:1100px;
+    margin:2rem auto;
+    padding:0 1rem;
+}
+
+.bienvenue{
+    font-size:1.4rem;
+    margin-bottom:1.5rem;
+}
+
+.bienvenue span{
+    color:#4f46e5;
+}
+
+/* FLASH */
+
+.flash-succes,
+.flash-erreur{
+    padding:.8rem 1rem;
+    border-radius:8px;
+    margin-bottom:1rem;
+}
+
+.flash-succes{
+    background:#f0fdf4;
+    color:#166534;
+}
+
+.flash-erreur{
+    background:#fef2f2;
+    color:#dc2626;
+}
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:1rem;
+    margin-bottom:2rem;
+}
+
+.stat-card{
+    background:#fff;
+    padding:1.5rem;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+}
+
+.label{
+    font-size:.8rem;
+    color:#64748b;
+    margin-bottom:.5rem;
+}
+
+.valeur{
+    font-size:1.7rem;
+    font-weight:700;
+}
+
+.vert{
+    color:#16a34a;
+}
+
+.bleu{
+    color:#4f46e5;
+}
+
+.sous{
+    margin-top:.4rem;
+    color:#94a3b8;
+    font-size:.85rem;
+}
+
+/* OBJECTIF */
+
+.objectif-badge{
+    display:inline-block;
+    padding:.35rem .8rem;
+    border-radius:999px;
+    font-size:.8rem;
+    font-weight:600;
+}
+
+.reduire{
+    background:#fef2f2;
+    color:#dc2626;
+}
+
+.augmenter{
+    background:#f0fdf4;
+    color:#16a34a;
+}
+
+.ideal{
+    background:#eff6ff;
+    color:#2563eb;
+}
+
+/* GOLD */
+
+.gold-box{
+    background:#fde68a;
+    padding:1.5rem;
+    border-radius:12px;
+    margin-bottom:2rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:1rem;
+    flex-wrap:wrap;
+}
+
+.btn-gold{
+    background:#d97706;
+    color:#fff;
+    border:none;
+    padding:.7rem 1.2rem;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* PORTEFEUILLE */
+
+.section-titre{
+    margin-bottom:1rem;
+    font-size:1.1rem;
+    font-weight:600;
+}
+
+.portefeuille-box{
+    background:#fff;
+    padding:1.5rem;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+}
+
+.portefeuille-box form{
+    display:flex;
+    gap:1rem;
+    flex-wrap:wrap;
+}
+
+.portefeuille-box input{
+    flex:1;
+    min-width:200px;
+    padding:.7rem;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.btn-recharger{
+    background:#10b981;
+    color:#fff;
+    border:none;
+    padding:.7rem 1.2rem;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+footer{
+    background:#1f1f1f;
+    color:white;
+    font-size: xx-large;
+    margin-top: 5%;
+    padding: 5%;
+    width: 100%;
+    text-align:center;
+}
