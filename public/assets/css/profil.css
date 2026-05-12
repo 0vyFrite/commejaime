@@ -1,0 +1,489 @@
+/* ===== PROFIL PAGE ===== */
+
+.btn-nav {
+    background: rgba(255,255,255,.15);
+    border: none;
+    color: #fff;
+    padding: .45rem .9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background .2s;
+}
+.btn-nav:hover { background: rgba(255,255,255,.3); }
+
+/* EN-TÊTE PROFIL */
+.profil-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,.08);
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 14px rgba(79,70,229,.35);
+}
+
+.profil-info h1 {
+    font-size: 1.8rem;
+    color: #1e293b;
+    margin-bottom: .3rem;
+}
+
+.profil-email {
+    color: #64748b;
+    font-size: .95rem;
+    margin-bottom: .8rem;
+}
+
+.profil-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    align-items: center;
+}
+
+.badge-genre, .badge-standard, .badge-date {
+    display: inline-flex;
+    align-items: center;
+    padding: .3rem .75rem;
+    border-radius: 999px;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.badge-genre { background: #ede9fe; color: #5b21b6; }
+.badge-standard { background: #dbeafe; color: #1d4ed8; }
+.badge-date { background: #f1f5f9; color: #475569; }
+
+.badge-gold-large {
+    display: inline-flex;
+    align-items: center;
+    padding: .3rem .9rem;
+    border-radius: 999px;
+    font-size: .82rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #fde68a, #fbbf24);
+    color: #78350f;
+    box-shadow: 0 2px 8px rgba(251,191,36,.4);
+}
+
+/* GRILLE PRINCIPALE */
+.profil-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+@media (max-width: 800px) {
+    .profil-grid { grid-template-columns: 1fr; }
+}
+
+.col-left, .col-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* CARD */
+.card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 1.75rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,.07);
+}
+
+.card-titre {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1.25rem;
+    padding-bottom: .75rem;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+/* SANTÉ GRID */
+.sante-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.sante-item {
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.sante-label {
+    font-size: .75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: .4rem;
+}
+
+.sante-valeur {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+.sante-valeur small { font-size: .9rem; font-weight: 400; color: #64748b; }
+.sante-valeur.vert { color: #16a34a; }
+.sante-valeur.bleu { color: #4f46e5; }
+
+.categorie-badge {
+    display: inline-block;
+    padding: .3rem .8rem;
+    background: #eff6ff;
+    color: #2563eb;
+    border-radius: 999px;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+/* JAUGE IMC */
+.imc-gauge-section {
+    margin-bottom: 1.5rem;
+}
+
+.gauge-label {
+    font-size: .85rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: .6rem;
+}
+
+.imc-gauge {
+    position: relative;
+}
+
+.gauge-bar {
+    position: relative;
+    height: 24px;
+    border-radius: 12px;
+    overflow: visible;
+    display: flex;
+    margin-bottom: 4px;
+}
+
+.gauge-zone {
+    height: 100%;
+    flex: 1;
+}
+.gauge-zone:first-child { border-radius: 12px 0 0 12px; }
+.gauge-zone:last-child  { border-radius: 0 12px 12px 0; }
+
+.maigreur { background: #93c5fd; }
+.normal   { background: #86efac; }
+.surpoids { background: #fde047; }
+.obesite  { background: #fca5a5; }
+
+.gauge-indicator {
+    position: absolute;
+    top: -4px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+.indicator-dot {
+    width: 16px;
+    height: 32px;
+    background: #1e293b;
+    border: 3px solid #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.3);
+}
+
+.indicator-label {
+    margin-top: 4px;
+    font-size: .72rem;
+    font-weight: 700;
+    background: #1e293b;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.gauge-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 28px;
+    padding: 0 2px;
+}
+
+.gauge-labels span {
+    font-size: .7rem;
+    color: #94a3b8;
+}
+
+/* OBJECTIF */
+.objectif-section {
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.objectif-titre {
+    font-weight: 600;
+    font-size: .9rem;
+    color: #475569;
+    margin-bottom: .6rem;
+}
+
+.objectif-desc {
+    font-size: .85rem;
+    color: #64748b;
+    margin-top: .5rem;
+}
+
+.profil-date-mesure {
+    font-size: .78rem;
+    color: #94a3b8;
+    margin-top: .5rem;
+}
+
+.no-data {
+    text-align: center;
+    color: #94a3b8;
+    padding: 2rem 0;
+}
+
+/* PORTEFEUILLE CARD */
+.card-portefeuille {
+    border-top: 4px solid #10b981;
+}
+
+.solde-display {
+    text-align: center;
+    background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.solde-montant {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #065f46;
+}
+.solde-montant small { font-size: 1rem; font-weight: 500; }
+
+.solde-label {
+    font-size: .8rem;
+    color: #6b7280;
+    margin-top: .3rem;
+}
+
+.recharge-section {
+    border-top: 1px solid #f1f5f9;
+    padding-top: 1.25rem;
+}
+
+.recharge-titre {
+    font-weight: 600;
+    font-size: .9rem;
+    color: #374151;
+    margin-bottom: .75rem;
+}
+
+.recharge-form {
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+}
+
+.input-code {
+    flex: 1;
+    min-width: 160px;
+    padding: .7rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: .9rem;
+    transition: border-color .2s;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+.input-code:focus {
+    outline: none;
+    border-color: #10b981;
+}
+
+.btn-recharger {
+    background: #10b981;
+    color: #fff;
+    border: none;
+    padding: .7rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: .9rem;
+    transition: background .2s;
+    white-space: nowrap;
+}
+.btn-recharger:hover { background: #059669; }
+
+.recharge-hint {
+    font-size: .78rem;
+    color: #9ca3af;
+    margin-top: .6rem;
+}
+
+/* GOLD CARD */
+.card-gold {
+    border-top: 4px solid #f59e0b;
+}
+
+.card-gold.gold-active {
+    border-top-color: #d97706;
+    background: linear-gradient(135deg, #fff, #fffbeb);
+}
+
+.gold-actif {
+    text-align: center;
+}
+
+.gold-icon {
+    font-size: 3rem;
+    margin-bottom: .5rem;
+}
+
+.gold-statut {
+    font-size: 1.1rem;
+    color: #92400e;
+    font-weight: 600;
+    margin-bottom: .75rem;
+}
+
+.gold-avantage {
+    font-size: .88rem;
+    color: #78350f;
+    margin: .35rem 0;
+}
+
+.gold-promo {}
+
+.gold-avantages-liste {
+    margin-bottom: 1rem;
+}
+
+.gold-avantage-item {
+    font-size: .88rem;
+    color: #374151;
+    margin: .4rem 0;
+}
+
+.gold-prix-box {
+    display: flex;
+    align-items: baseline;
+    gap: .5rem;
+    margin-bottom: 1rem;
+    background: #fffbeb;
+    border-radius: 8px;
+    padding: .75rem 1rem;
+}
+
+.gold-prix {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #d97706;
+}
+
+.gold-prix-label {
+    font-size: .8rem;
+    color: #9ca3af;
+}
+
+.btn-gold-profil {
+    width: 100%;
+    background: linear-gradient(135deg, #d97706, #b45309);
+    color: #fff;
+    border: none;
+    padding: .85rem;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .2s;
+    box-shadow: 0 4px 14px rgba(217,119,6,.35);
+}
+.btn-gold-profil:hover:not(:disabled) {
+    background: linear-gradient(135deg, #b45309, #92400e);
+    transform: translateY(-1px);
+}
+.btn-gold-profil:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.gold-insuffisant-msg {
+    font-size: .8rem;
+    color: #dc2626;
+    margin-top: .5rem;
+    text-align: center;
+}
+
+/* RÉSUMÉ */
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .75rem;
+}
+
+.resume-item {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: .9rem;
+    text-align: center;
+}
+
+.resume-valeur {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+.resume-valeur.vert { color: #16a34a; }
+.resume-valeur.gris { color: #9ca3af; }
+.resume-valeur.bleu { color: #4f46e5; }
+
+.resume-label {
+    font-size: .72rem;
+    color: #94a3b8;
+    margin-top: .3rem;
+}
+
+.btn-vers-dashboard {
+    display: inline-block;
+    background: #4f46e5;
+    color: #fff;
+    padding: .7rem 1.4rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .9rem;
+    transition: background .2s;
+}
+.btn-vers-dashboard:hover { background: #3730a3; }

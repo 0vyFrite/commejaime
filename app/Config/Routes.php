@@ -27,3 +27,7 @@ $routes->get('/dashboard','DashboardController::index');
 
 //Regimes
 $routes->get('/regimes/export/(:num)/(:num)/(:num)','RegimesController::exportRegimePdf/$1/$2/$3');
+//profil
+$routes->get('/profil', 'ProfilController::index');
+// Ligne 32 - Recharge du portefeuille
+$routes->post('/portefeuille/recharger','ProfilController::rechargerPortefeuille');
